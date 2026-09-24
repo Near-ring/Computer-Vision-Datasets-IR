@@ -1,0 +1,41 @@
+[build-system]
+requires = ["maturin>=1.9,<2"]
+build-backend = "maturin"
+
+[project]
+name = "cv-dataset-ir"
+version = "0.1.0"
+description = "Rust CV dataset transforms and portable packed IR with NumPy/PyTorch access"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.26", "msgpack>=1.0", "zstandard>=0.23"]
+
+[project.optional-dependencies]
+torch = ["torch>=2.2"]
+
+[dependency-groups]
+dev = ["maturin>=1.9,<2", "pytest>=8", "ruff>=0.12", "basedpyright>=1.30"]
+
+[tool.maturin]
+manifest-path = "bindings/python/Cargo.toml"
+module-name = "cv_dataset_ir._native"
+python-source = "python"
+
+[tool.ruff]
+target-version = "py310"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.basedpyright]
+include = ["python/cv_dataset_ir", "examples/pytorch_loader.py"]
+pythonVersion = "3.10"
+typeCheckingMode = "standard"
+extraPaths = ["python"]
+# _native is compiled code with an accompanying stub.
+reportMissingModuleSource = false
+venvPath = "."
+venv = ".venv"
+
+[tool.pytest.ini_options]
+testpaths = ["python/tests"]

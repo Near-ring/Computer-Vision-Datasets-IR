@@ -1,0 +1,8 @@
+/target/
+*.cvir
+!tests/fixtures/legacy_v1.cvir
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.so

@@ -1,0 +1,60 @@
+{
+  "rayon_threads": 20,
+  "results": [
+    {
+      "annotations": 30,
+      "dataset": "coco8",
+      "packed_bytes": 5710308,
+      "read_ms": 4.32733,
+      "resize_rotate_ms": 3.852777,
+      "roundtrips": [
+        "packed",
+        "coco",
+        "labelme",
+        "yolo"
+      ],
+      "samples": 8,
+      "splits": {
+        "train": 4,
+        "val": 4
+      }
+    },
+    {
+      "annotations": 21,
+      "dataset": "coco8-pose",
+      "packed_bytes": 4528370,
+      "read_ms": 4.0878,
+      "resize_rotate_ms": 4.278199,
+      "roundtrips": [
+        "packed",
+        "coco",
+        "labelme",
+        "yolo"
+      ],
+      "samples": 8,
+      "splits": {
+        "train": 4,
+        "val": 4
+      }
+    },
+    {
+      "annotations": 30,
+      "dataset": "coco8-seg",
+      "packed_bytes": 5720129,
+      "read_ms": 3.110429,
+      "resize_rotate_ms": 3.696552,
+      "roundtrips": [
+        "packed",
+        "coco",
+        "labelme",
+        "yolo"
+      ],
+      "samples": 8,
+      "splits": {
+        "train": 4,
+        "val": 4
+      }
+    }
+  ],
+  "simd": "Avx2"
+}

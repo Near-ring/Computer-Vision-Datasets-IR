@@ -1,0 +1,16 @@
+[package]
+name = "cv-dataset-ir-python"
+version = "0.1.0"
+edition = "2024"
+publish = false
+
+[lib]
+name = "_native"
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+cv-dataset-ir = { path = "../.." }
+numpy = "0.29.0"
+pyo3 = { version = "0.29.2", features = ["extension-module"] }
+serde = "1.0.229"
+serde_json = "1.0.151"

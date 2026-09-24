@@ -1,0 +1,6 @@
+{
+  "pycocotools_version": "2.0.11",
+  "coco_annotations_validated": 81,
+  "yolo_rows_compared_to_downloaded_labels": 81,
+  "maximum_normalized_yolo_coordinate_error": 1.0000000005838672e-07
+}
